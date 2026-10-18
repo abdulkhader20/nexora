@@ -2,9 +2,12 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://abdulkhader20.github.io/nexora",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "node server/server.js",
+    "dev:full": "concurrently \"npm run dev -- --host 0.0.0.0 --port 4173\" \"npm run server\"",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
@@ -12,6 +15,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.0",
+    "concurrently": "^9.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "lucide-react": "^1.59.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

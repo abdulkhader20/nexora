@@ -9,6 +9,7 @@ import {
   Code2,
   Globe,
   Mail,
+  MapPin,
   Menu,
   MessageCircle,
   Phone,
@@ -22,30 +23,40 @@ import {
 import logo from "./assets/logo.svg";
 import "./index.css";
 
-const brandName = "Aurel";
+const brandName = "Nexora";
 
 const services = [
   {
-    title: "Brand & Web Design",
-    description: "Modern websites and brand systems built to build trust quickly.",
+    title: "Website Development",
+    description: "Modern business websites designed to look premium, load fast, and convert visitors into leads.",
     icon: Sparkles,
   },
   {
-    title: "Conversion Websites",
-    description: "Landing pages and funnels designed to turn interest into qualified leads.",
+    title: "Web App Development",
+    description: "Custom dashboards, product pages, and client portals built for performance and growth.",
     icon: TrendingUp,
   },
   {
-    title: "Custom Business Tools",
-    description: "Process automation and dashboards that save time across your operations.",
+    title: "Business Automation",
+    description: "Process automation, APIs, and backend systems that reduce manual work and scale operations.",
     icon: BarChart3,
   },
 ];
 
+const technologies = [
+  { name: "HTML", tone: "violet" },
+  { name: "CSS", tone: "blue" },
+  { name: "JavaScript", tone: "gold" },
+  { name: "React", tone: "cyan" },
+  { name: "Node.js", tone: "green" },
+  { name: "MongoDB", tone: "rose" },
+  { name: "MySQL", tone: "indigo" },
+];
+
 const stats = [
-  { value: "120+", label: "Projects shipped" },
-  { value: "4.9/5", label: "Average client rating" },
-  { value: "3x", label: "Faster launch cycles" },
+  { value: "120+", label: "Projects delivered" },
+  { value: "4.9/5", label: "Client satisfaction" },
+  { value: "30d", label: "Typical launch window" },
 ];
 
 const steps = [
@@ -66,50 +77,100 @@ const steps = [
 const testimonials = [
   {
     quote:
-      "The team helped us turn a rough idea into a website that immediately felt premium and credible.",
-    author: "Aisha Rahman",
-    role: "Founder, Northlane Studio",
+      "Our dental clinic in Vijayawada needed a website that felt trustworthy and local. The design looked premium, professional, and helped more patients from our city call us after seeing the site.",
+    author: "Dr. Venkata Rao",
+    role: "Owner, Sree Dental Care, Vijayawada",
+    image:
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80",
   },
   {
     quote:
-      "They understood our sales process and designed a site that made our offer easier to understand.",
-    author: "Daniel Scott",
-    role: "Marketing Lead, Vision Works",
+      "We wanted a website that represented our auto workshop properly in Guntur. The final result looked polished and helped us win more local enquiries from people who trust our service.",
+    author: "Mohammed Javeed",
+    role: "Manager, City Wheel Works, Guntur",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    quote:
+      "We needed a website that felt true to our style and customer base in Vizag. The final design is clean, credible, and now more people contact us from nearby areas.",
+    author: "Lakshmi Devi",
+    role: "Founder, Sri Lakshmi Boutique, Vizag",
+    image:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    quote:
+      "Our restaurant in Rajahmundry needed a modern website that looked professional and easy to trust. The new design helped more local customers reach out and book tables.",
+    author: "Ramesh Kumar",
+    role: "Owner, Royal Spice Grill, Rajahmundry",
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    quote:
+      "We wanted a clean, reliable website for our interior design business in Rajahmundry. The final result looks premium and helped us attract more enquiries from nearby families.",
+    author: "Sowjanya Reddy",
+    role: "Founder, DreamSpace Interiors, Rajahmundry",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
   },
 ];
 
-const templateCards = [
+const projectCards = [
   {
-    title: "SaaS Hero Site",
-    description: "High-converting layout for product companies and startup launches.",
+    title: "ShoppyGlobe",
+    description: "Responsive e-commerce platform built with React, Redux, and React Router for product browsing, cart management, and smooth user navigation.",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Agency Portfolio",
-    description: "Clean service pages and project storytelling for creative agencies.",
+    title: "YouTube-Inspired Platform",
+    description: "MERN stack video platform with uploads, authentication, likes, comments, shares, and personalized recommendations for a rich streaming experience.",
     image:
-      "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "Business Growth Site",
-    description: "Modern marketing pages built to showcase services and generate enquiries.",
+    title: "Weather Forecast App",
+    description: "Real-time weather application with location-based updates, live API integration, and a responsive interface for multi-device access.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "Personal Portfolio Website",
+    description: "Responsive portfolio built with HTML and CSS to present skills, projects, and professional profile in a clean user-friendly layout.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    title: "College Fest Registration System",
+    description: "Cross-device registration app with client-side validation and dynamic form interactions for college event signups.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
 function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   function handleContact(event) {
     event.preventDefault();
-    const subject = encodeURIComponent(`Project enquiry - ${brandName}`);
-    const body = encodeURIComponent(
-      `Hello,\n\nI would like to discuss a new project.\nMy email: ${email}`
+
+    const whatsappText = encodeURIComponent(
+      `Hello, I want to discuss a new project.\n\nClient email: ${email}\n\nProject details:\n${message}`
     );
-    window.location.href = `mailto:mohammadabdulkhader20@gmail.com?subject=${subject}&body=${body}`;
+    const emailSubject = encodeURIComponent(`Project enquiry - ${brandName}`);
+    const emailBody = encodeURIComponent(
+      `Hello,\n\nI would like to discuss a new project.\n\nClient email: ${email}\n\nProject details:\n${message}`
+    );
+
+    const whatsappUrl = `https://wa.me/917569211459?text=${whatsappText}`;
+    const emailUrl = `mailto:mohammadabdulkhader20@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    window.location.href = emailUrl;
   }
 
   function closeMenu() {
@@ -142,12 +203,9 @@ function HomePage() {
             <a href="#services" onClick={closeMenu}>Services</a>
             <a href="#process" onClick={closeMenu}>Process</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
-            <Link className="nav-login" to="/login" onClick={closeMenu}>
-              Sign in <ArrowRight size={15} />
-            </Link>
-            <Link className="nav-signup" to="/signup" onClick={closeMenu}>
-              Get started
-            </Link>
+            <a className="nav-signup" href="tel:+917569211459" onClick={closeMenu}>
+              Call us
+            </a>
           </nav>
         </div>
       </header>
@@ -158,17 +216,17 @@ function HomePage() {
             <div className="hero-copy">
               <span className="eyebrow">
                 <Sparkles size={15} />
-                Luxury digital experiences
+                Digital growth for growing businesses
               </span>
               <h1>
-                Refined websites for brands that want to lead with presence.
+                Stronger local brands start with websites that convert.
               </h1>
               <p>
-                {brandName} helps premium businesses look sharper, sell smarter, and grow faster with strategic design, bespoke websites, and digital systems that elevate your market position.
+                {brandName} designs polished, high-converting websites and digital experiences for businesses that want a stronger online presence, smoother customer journey, and real growth in their market.
               </p>
               <div className="hero-actions">
-                <a className="button-primary" href="#contact">
-                  Book a discovery call <ArrowRight size={18} />
+                <a className="button-primary" href="tel:+917569211459">
+                  Call for a quote <ArrowRight size={18} />
                 </a>
                 <a className="button-secondary" href="#services">
                   Explore services
@@ -176,17 +234,17 @@ function HomePage() {
               </div>
               <div className="hero-trust">
                 <CheckCircle2 size={17} />
-                Clear communication, fast delivery, and measurable growth.
+                Trusted by growing businesses that want a stronger local presence.
               </div>
             </div>
 
-            <div className="hero-visual" aria-label="Aurel product preview">
+            <div className="hero-visual" aria-label="NexaForge product preview">
               <div className="visual-card main-card">
                 <div className="card-head">
                   <span className="dot purple" />
                   <span className="dot pink" />
                   <span className="dot gold" />
-                  <span className="mini-label">AUREL</span>
+                  <span className="mini-label">NEXORA</span>
                 </div>
                 <div className="card-body">
                   <div className="chart-box">
@@ -232,11 +290,11 @@ function HomePage() {
           <div className="container split-layout">
             <div>
               <span className="section-label">WHY TEAMS CHOOSE US</span>
-              <h2>Simple strategy. Strong execution. Real business value.</h2>
+              <h2>Strategy-first software and web experiences that support real growth.</h2>
             </div>
             <div className="about-copy">
               <p>
-                We work with founders, growing teams, and service businesses that need a clearer digital presence and a stronger online sales process.
+                We work with founders, service businesses, and modern teams that need a stronger digital presence, smoother customer journey, and better tools for day-to-day operations.
               </p>
               <div className="feature-list">
                 <div>
@@ -255,16 +313,16 @@ function HomePage() {
         <section className="templates section" id="templates">
           <div className="container">
             <div className="section-head narrow">
-              <span className="section-label">TEMPLATE IDEAS</span>
-              <h2>Modern website layouts designed to feel premium and conversion-ready.</h2>
+              <span className="section-label">PROJECTS</span>
+              <h2>Projects completed during my full stack development training and self-learning journey.</h2>
             </div>
             <div className="template-grid">
-              {templateCards.map((template) => (
-                <article className="template-card" key={template.title}>
-                  <img src={template.image} alt={template.title} />
+              {projectCards.map((project) => (
+                <article className="template-card" key={project.title}>
+                  <img src={project.image} alt={project.title} />
                   <div className="template-copy">
-                    <h3>{template.title}</h3>
-                    <p>{template.description}</p>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
                   </div>
                 </article>
               ))}
@@ -288,12 +346,26 @@ function HomePage() {
                     </div>
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
-                    <Link to="/signup" className="text-link">
-                      Get started <ArrowRight size={15} />
-                    </Link>
+                    <a href="tel:+917569211459" className="text-link">
+                      Call us <ArrowRight size={15} />
+                    </a>
                   </article>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        <section className="tech-stack section">
+          <div className="container">
+            <div className="section-head narrow">
+              <span className="section-label">TECHNOLOGIES</span>
+              <h2>Core tools and technologies used to build responsive, scalable digital products.</h2>
+            </div>
+            <div className="tech-list">
+              {technologies.map((tech) => (
+                <span className={`tech-pill tech-${tech.tone}`} key={tech.name}>{tech.name}</span>
+              ))}
             </div>
           </div>
         </section>
@@ -319,21 +391,27 @@ function HomePage() {
         <section className="testimonials section">
           <div className="container">
             <div className="section-head narrow">
-              <span className="section-label">CLIENT FEEDBACK</span>
-              <h2>People like working with teams that keep it simple.</h2>
+              <span className="section-label">LOCAL REVIEWS</span>
+              <h2>Trusted by local businesses that wanted a stronger online presence.</h2>
             </div>
             <div className="testimonial-grid">
               {testimonials.map((item) => (
                 <article className="testimonial-card" key={item.author}>
-                  <div className="stars">
-                    {[...Array(5)].map((_, index) => (
-                      <Star key={index} size={14} fill="currentColor" />
-                    ))}
+                  <div className="review-topline">
+                    <div className="stars">
+                      {[...Array(5)].map((_, index) => (
+                        <Star key={index} size={14} fill="currentColor" />
+                      ))}
+                    </div>
+                    <span className="review-badge">Verified review</span>
                   </div>
                   <p>“{item.quote}”</p>
                   <div className="author-block">
-                    <strong>{item.author}</strong>
-                    <span>{item.role}</span>
+                    <img className="review-avatar" src={item.image} alt={item.author} />
+                    <div className="author-copy">
+                      <strong>{item.author}</strong>
+                      <span>{item.role}</span>
+                    </div>
                   </div>
                 </article>
               ))}
@@ -357,6 +435,10 @@ function HomePage() {
                 <Phone size={17} />
                 <a href="tel:+917569211459">+91 75692 11459</a>
               </div>
+              <div className="contact-pill address-pill">
+                <MapPin size={17} />
+                <span>Rajahmundry, Andhra Pradesh</span>
+              </div>
             </div>
 
             <form className="contact-form" onSubmit={handleContact}>
@@ -369,6 +451,17 @@ function HomePage() {
                 onChange={(event) => setEmail(event.target.value)}
                 required
               />
+
+              <label htmlFor="message">Project details</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Tell us about your website, app, or business requirement..."
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                required
+              />
+
               <button className="button-primary form-button" type="submit">
                 Send enquiry <ArrowRight size={18} />
               </button>
@@ -379,7 +472,7 @@ function HomePage() {
 
       <a
         className="wa-float"
-        href="https://wa.me/917569211459?text=Hi%20Aurel%2C%20I%20want%20to%20discuss%20my%20project."
+        href="https://wa.me/917569211459?text=Hi%20NexaForge%2C%20I%20want%20to%20discuss%20my%20project."
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
@@ -403,152 +496,10 @@ function HomePage() {
   );
 }
 
-function AuthPage({ mode }) {
-  const isLogin = mode === "login";
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    fullName: "",
-    company: "",
-    email: "",
-    password: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setFormData((current) => ({ ...current, [name]: value }));
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    setSubmitted(true);
-
-    setTimeout(() => {
-      navigate("/");
-    }, 900);
-  }
-
-  return (
-    <main className="auth-page">
-      <div className="auth-shell">
-        <Link className="brand auth-brand" to="/">
-          <img src={logo} alt={`${brandName} logo`} className="brand-logo" />
-          <span>
-            {brandName}
-          </span>
-        </Link>
-
-        <div className="auth-card">
-          <span className="section-label small-label">
-            {isLogin ? "Welcome back" : "Create account"}
-          </span>
-          <h2>{isLogin ? "Sign in to your workspace" : `Start your project with ${brandName}`}</h2>
-
-          <div className="auth-trust">
-            <span>Secure</span>
-            <span>Private</span>
-            <span>Fast</span>
-          </div>
-
-          <div className="auth-socials">
-            <button type="button" className="auth-social-btn">Google</button>
-            <button type="button" className="auth-social-btn">Apple</button>
-          </div>
-
-          <div className="divider"><span>or continue with email</span></div>
-
-          <form className="auth-form" onSubmit={handleSubmit}>
-            {!isLogin && (
-              <label>
-                Full name
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                  required
-                />
-              </label>
-            )}
-
-            {!isLogin && (
-              <label>
-                Company name
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Your business"
-                  required
-                />
-              </label>
-            )}
-
-            <label>
-              Email address
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="you@company.com"
-                required
-              />
-            </label>
-
-            <label>
-              Password
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                placeholder="••••••••"
-                required
-              />
-            </label>
-
-            {isLogin && (
-              <div className="auth-row">
-                <label className="remember-me">
-                  <input type="checkbox" defaultChecked />
-                  <span>Remember me</span>
-                </label>
-                <Link to="/signup" className="text-link auth-link">Forgot password?</Link>
-              </div>
-            )}
-
-            <button className="button-primary form-button" type="submit">
-              {isLogin ? "Sign in" : "Create account"} <ArrowRight size={18} />
-            </button>
-
-            {submitted && (
-              <p className="success-message">
-                {isLogin ? "Signed in successfully." : "Account created successfully."}
-              </p>
-            )}
-          </form>
-
-          <p className="auth-switch">
-            {isLogin ? "Need an account?" : "Already have an account?"}{" "}
-            <Link to={isLogin ? "/signup" : "/login"}>
-              {isLogin ? "Create one" : "Sign in"}
-            </Link>
-          </p>
-        </div>
-      </div>
-    </main>
-  );
-}
-
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<AuthPage mode="login" />} />
-      <Route path="/signup" element={<AuthPage mode="signup" />} />
     </Routes>
   );
 }
